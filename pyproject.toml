@@ -1,0 +1,13 @@
+[project]
+name = "oracle-schema-diff"
+version = "0.1.0"
+description = "Compare Oracle table and column metadata and apply safe changes to DB2."
+requires-python = ">=3.12"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "integration: live Oracle tests; skipped unless ORACLE_SCHEMA_DIFF_INTEGRATION=1",
+]
